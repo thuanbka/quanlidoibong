@@ -1,0 +1,21 @@
+name: PR Convention Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  convention:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Check Python
+        run: python --version
+
+      - name: Run convention checker
+        run: |
+          python tools/check_conventions.py
