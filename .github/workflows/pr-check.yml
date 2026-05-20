@@ -3,7 +3,7 @@ name: PR Convention Check
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   convention:
